@@ -23,4 +23,11 @@ public class RankingTest {
         assertEquals(2, ranking.getNumberOfMovies());
     }
 
+    @Test
+    public void canGetAnswerAtIndex() {
+        Ranking ranking = new Ranking();
+        Movie topMovie = ranking.getMoviesAtIndex(0);
+        assertEquals("The Godfather", topMovie.getTitle());
+    }
+
 }

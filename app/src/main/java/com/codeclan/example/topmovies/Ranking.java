@@ -40,4 +40,8 @@ public class Ranking {
     public int getNumberOfMovies() {
         return this.topMovies.size();
     }
+
+    public Movie getMoviesAtIndex(int i) {
+        return this.topMovies.get(i);
+    }
 }
