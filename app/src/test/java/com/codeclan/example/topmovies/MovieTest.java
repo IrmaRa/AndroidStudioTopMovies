@@ -23,8 +23,14 @@ public class MovieTest {
     }
 
     @Test
-    public void canGetCurrentRanking(){
+    public void canGetCurrentRanking() {
         Movie movie = new Movie("The Godfather", "Drama", 1);
         assertEquals(1, movie.getRank());
+    }
+
+    @Test
+    public void canReturnMovieDetails() {
+        Movie movie = new Movie("The Godfather", "Drama", 1);
+        assertEquals("Title: 'The Godfather', Genre: 'Drama', Ranking: 1", movie.toString());
     }
 }
