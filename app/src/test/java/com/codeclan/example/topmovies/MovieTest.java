@@ -12,8 +12,13 @@ public class MovieTest {
 
     @Test
     public void canGetMovieTitle() {
-        Movie movie = new Movie("The Godfather");
+        Movie movie = new Movie("The Godfather", "Drama");
         assertEquals("The Godfather", movie.getTitle());
+    }
 
+    @Test
+    public void canGetMovieGenre() {
+        Movie movie = new Movie("The Godfather", "Drama");
+        assertEquals("Drama", movie.getGenre());
     }
 }
