@@ -7,10 +7,12 @@ package com.codeclan.example.topmovies;
 public class Movie {
     private String title;
     private String genre;
+    private int rank;
 
-    public Movie(String title, String genre) {
+    public Movie(String title, String genre, int rank) {
         this.title = title;
         this.genre = genre;
+        this.rank = rank;
     }
 
 
@@ -20,5 +22,9 @@ public class Movie {
 
     public String getGenre() {
         return genre;
+    }
+
+    public int getRank() {
+        return rank;
     }
 }
