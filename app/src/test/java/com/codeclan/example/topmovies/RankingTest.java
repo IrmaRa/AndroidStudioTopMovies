@@ -20,7 +20,7 @@ public class RankingTest {
     @Test
     public void hasTwoMoviesByDefault() {
         Ranking ranking = new Ranking();
-        assertEquals(2, ranking.getNumberOfMovies());
+        assertEquals(10, ranking.getNumberOfMovies());
     }
 
     @Test
@@ -28,6 +28,14 @@ public class RankingTest {
         Ranking ranking = new Ranking();
         Movie topMovie = ranking.getMoviesAtIndex(0);
         assertEquals("The Godfather", topMovie.getTitle());
+    }
+
+    @Test
+    public void canReplaceLastMovie() {
+        Ranking ranking = new Ranking();
+        Movie topMovie = new Movie("Home Alone", "Comedy", 10);
+        assertEquals("Home Alone", ranking.replaceMovie(topMovie));
+
     }
 
 }
