@@ -35,7 +35,12 @@ public class RankingTest {
         Ranking ranking = new Ranking();
         Movie topMovie = new Movie("Home Alone", "Comedy", 10);
         assertEquals("Home Alone", ranking.replaceMovie(topMovie));
+    }
 
+    @Test
+    public void canFindMovieByTitle() {
+        Ranking ranking = new Ranking();
+        assertEquals("Title: 'Casablanca', Genre: 'Romance', Ranking: 5", ranking.findByTitle("Casablanca"));
     }
 
 }

@@ -57,4 +57,14 @@ public class Ranking {
         Movie movie10 = topMovie;
         return topMovie.getTitle();
     }
+
+
+    public String findByTitle(String title) {
+        for (Movie topMovie : this.topMovies) {
+            if (topMovie.getTitle() == title) {
+                return topMovie.toString();
+            }
+        }
+        return null;
+    }
 }
