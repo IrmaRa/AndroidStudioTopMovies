@@ -37,4 +37,7 @@ public class Ranking {
       return new ArrayList<>(this.topMovies);
   }
 
+    public int getNumberOfMovies() {
+        return this.topMovies.size();
+    }
 }

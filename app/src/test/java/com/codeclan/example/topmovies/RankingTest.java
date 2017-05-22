@@ -2,6 +2,7 @@ package com.codeclan.example.topmovies;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
@@ -14,6 +15,12 @@ public class RankingTest {
     public void topMoviesAreNotNull() {
         Ranking ranking = new Ranking();
         assertNotNull(ranking.getMovies());
+    }
+
+    @Test
+    public void hasTwoMoviesByDefault() {
+        Ranking ranking = new Ranking();
+        assertEquals(2, ranking.getNumberOfMovies());
     }
 
 }
